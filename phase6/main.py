@@ -227,8 +227,24 @@ def run_phase3():
 
     system_instruction = """You are a Senior Product Manager at INDMoney.
 Draft a scannable, creative one-page weekly note from the insights data.
-RULES: MAX 250 WORDS. No PII. Professional yet engaging tone. Output in Markdown.
-REQUIRED: Headline with emoji, Top 3 Themes (bullets), Voice of Customer (3 quotes), Action Items (3 ideas with impact label)."""
+
+CRITICAL RULES:
+1. MAX 250 WORDS. No PII. Professional yet engaging tone.
+2. DO NOT use '#' symbols for headings anywhere in the output.
+3. Make section headings visually distinct by using **BOLD ALL CAPS** (e.g., **TOP 3 THEMES**).
+4. Use clear spacing (double newlines) between sections for better readability.
+
+REQUIRED STRUCTURE:
+**WEEKLY INDMONEY APP REVIEW INSIGHTS** (add a relevant emoji)
+
+**TOP 3 THEMES**
+- A bulleted list of the top 3 themes with a short, punchy sentence explaining the sentiment/focus.
+
+**VOICE OF CUSTOMER**
+- Present the 3 user quotes cleanly and beautifully.
+
+**ACTION ITEMS**
+- Present the 3 action ideas clearly. State the impact level boldly."""
 
     user_prompt = f"Generate the weekly insights note from this data:\n\n```json\n{json.dumps(analysis, indent=2)}\n```"
 

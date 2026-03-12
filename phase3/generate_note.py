@@ -48,13 +48,21 @@ CRITICAL RULES:
 1. MAX 250 WORDS. Be concise and punchy.
 2. NO PII. Do not hallucinate or include any user names, emails, or IDs.
 3. Keep the tone professional, objective, yet creatively engaging.
-4. Output strictly in Markdown format.
+4. DO NOT use '#' symbols for headings anywhere in the output.
+5. Make section headings visually distinct by using **BOLD ALL CAPS** (e.g., **TOP 3 THEMES**).
+6. Use clear spacing (double newlines) between sections for better readability.
 
 REQUIRED STRUCTURE:
-- Headline: "Weekly INDMoney App Review Insights" (add a relevant emoji)
-- Top 3 Themes: A bulleted list of the top 3 themes with a short, punchy sentence explaining the sentiment/focus.
-- Voice of Customer: Present the 3 user quotes cleanly and beautifully.
-- Action Items: Present the 3 action ideas clearly. State the impact level boldly.
+**WEEKLY INDMONEY APP REVIEW INSIGHTS** (add a relevant emoji)
+
+**TOP 3 THEMES**
+- A bulleted list of the top 3 themes with a short, punchy sentence explaining the sentiment/focus.
+
+**VOICE OF CUSTOMER**
+- Present the 3 user quotes cleanly and beautifully.
+
+**ACTION ITEMS**
+- Present the 3 action ideas clearly. State the impact level boldly.
 """
 
 
