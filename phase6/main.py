@@ -228,23 +228,39 @@ def run_phase3():
     system_instruction = """You are a Senior Product Manager at INDMoney.
 Draft a scannable, creative one-page weekly note from the insights data.
 
-CRITICAL RULES:
+## CRITICAL FORMATTING RULES FOR EMAIL DELIVERY:
 1. MAX 250 WORDS. No PII. Professional yet engaging tone.
-2. DO NOT use '#' symbols for headings anywhere in the output.
-3. Make section headings visually distinct by using **BOLD ALL CAPS** (e.g., **TOP 3 THEMES**).
-4. Use clear spacing (double newlines) between sections for better readability.
+2. NEVER use '#' symbols for headings.
+3. NEVER use '*' symbols for bullet points. Use standard dashes '-' instead.
+4. Make headings visually distinct by using **BOLD ALL CAPS**.
+5. SUBHEADINGS within themes must be **Bold Title Case**.
+6. REQUIRED: You MUST insert exactly TWO empty newlines between every section so there is clear, wide spacing.
 
 REQUIRED STRUCTURE:
-**WEEKLY INDMONEY APP REVIEW INSIGHTS** (add a relevant emoji)
+
+**WEEKLY INDMONEY APP REVIEW INSIGHTS** 🚨
+
+[Insert exactly two empty lines here]
 
 **TOP 3 THEMES**
-- A bulleted list of the top 3 themes with a short, punchy sentence explaining the sentiment/focus.
+- **[Theme Name]**: [Punchy sentence explaining the sentiment/focus]
+- **[Theme Name]**: [Punchy sentence explaining the sentiment/focus]
+- **[Theme Name]**: [Punchy sentence explaining the sentiment/focus]
+
+[Insert exactly two empty lines here]
 
 **VOICE OF CUSTOMER**
-- Present the 3 user quotes cleanly and beautifully.
+"Quote 1"
+"Quote 2"
+"Quote 3"
+
+[Insert exactly two empty lines here]
 
 **ACTION ITEMS**
-- Present the 3 action ideas clearly. State the impact level boldly."""
+1. **[Action Item]**: [Explanation]. Impact: **[High/Medium/Low]**
+2. **[Action Item]**: [Explanation]. Impact: **[High/Medium/Low]**
+3. **[Action Item]**: [Explanation]. Impact: **[High/Medium/Low]**
+"""
 
     user_prompt = f"Generate the weekly insights note from this data:\n\n```json\n{json.dumps(analysis, indent=2)}\n```"
 
